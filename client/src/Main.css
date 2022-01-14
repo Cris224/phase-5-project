@@ -1,0 +1,21 @@
+#container{
+    background-color: chartreuse;
+}
+
+
+
+.card{
+    background-color: darkgoldenrod;
+    display: flex;
+    padding: 20px;
+    
+}
+
+
+
+img{
+    width: 15%;
+    border-radius: 10%;
+    border: black;
+    border-style: solid;
+}
