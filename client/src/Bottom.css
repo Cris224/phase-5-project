@@ -1,3 +1,9 @@
 #btm {
-    background-color: crimson;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: absolute;
+    object-position: bottom;
+    /* bottom: 30px; */
+    width: 97%;
+    margin: inherit;
 }

@@ -1,21 +1,39 @@
 import { useState } from 'react'
+import './Login.css'
+import {Link} from 'react-router-dom';
 
-function Login(){
-
-    const [name, setName] = useState('')
-    const [username, setUserName] = useState('')
-
+function Login({ onLogin }) {
+    const [username, setUsername] = useState("");
+  
+    function handleSubmit(e) {
+      e.preventDefault();
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username }),
+      })
+        .then((r) => r.json())
+        .then((user) => onLogin(user));
+    }
+  
     return (
-        <div id='login'>
-            <form onSubmit={(e) => {
-                e.preventDefault()
-                console.log(name, username)}}>
-                <input placeholder='Name' onChange={(e) => setName(e.target.value)}></input>
-                <input placeholder='Username' onChange={(e) => setUserName(e.target.value)}></input>
-                <button type='submit'>X</button>
-            </form>
-        </div>
-    )
-}
+      <form onSubmit={handleSubmit} id='login'>
+        <input
+          type="text"
+          placeholder='Username'
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <button type="submit">Login</button>
+        <p>If you do not have an account please 
+          <Link to='/create-account'>
+            Sign Up.
+          </Link>
+          </p>
+      </form>
+    );
+  }
 
 export default Login

@@ -1,21 +1,28 @@
 #container{
-    background-color: chartreuse;
-}
-
-
-
-.card{
-    background-color: darkgoldenrod;
+    background-color: rgba(255, 255, 255, 0.322);
     display: flex;
-    padding: 20px;
-    
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 2px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 700;
+}
+
+
+.thumbnail:hover{
+    width: 160px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    box-shadow: 0px 0px 15px rgb(104, 174, 255);
 }
 
 
 
-img{
-    width: 15%;
-    border-radius: 10%;
+.thumbnail{
+    width: 150px;
+    margin: 10px;
+    border-radius: 5px;
     border: black;
-    border-style: solid;
+    border-style: hidden;
 }

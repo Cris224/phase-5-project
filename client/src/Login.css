@@ -1,0 +1,12 @@
+#login{
+    background-color: rgba(0, 0, 0, 0.068);
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    height: 250px;
+}
+
+input{
+    padding: 2px;
+    margin: 10px;
+}

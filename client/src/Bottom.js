@@ -4,7 +4,7 @@ function Bottom(){
     return(
         <>
             <footer id='btm'>
-                abotu
+                About
             </footer>
         </>
     )

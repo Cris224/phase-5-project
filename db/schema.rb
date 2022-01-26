@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2022_01_12_175940) do
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.string "comment"
-    t.integer "user_id", null: false
-    t.integer "game_id", null: false
+    t.integer "user_id"
+    t.integer "game_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_reviews_on_game_id"
@@ -39,6 +39,4 @@ ActiveRecord::Schema.define(version: 2022_01_12_175940) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "reviews", "games"
-  add_foreign_key "reviews", "users"
 end

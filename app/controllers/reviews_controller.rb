@@ -22,14 +22,15 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        new_review = Review.create(review_params)
+        new_review = Review.create!(review_params)
         render json: new_review, status: :created
     end
 
+    
     private
 
     def review_params
-        params.permit(:rating, :comment, :user_id, game_id)
+        params.permit(:rating, :comment, :user_id, :game_id)
     end
 
 end

@@ -1,9 +1,9 @@
 import './Main.css'
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-function Main(){
+function Main({fetchGame}){
 
     const [games, setGames] = useState([])
 
@@ -13,26 +13,24 @@ function Main(){
         .then((data) => setGames(data))
     }, [])
 
-
+    
 
     return(
         <div id='container'>
-            hfbgvkfujdhbvi
-            <div className='card'>
-            {/* {games.forEach(game => {
-                
-            }); */}
+            
             {games.map(game => {
                 
                 return(
                 
                     <div key={game.id}>
-                        <img alt={game.name} src={game.image}/>
+                        <Link to='/details'>
+                            <img className='thumbnail' onClick={(e) => fetchGame(e.target.alt)} alt={game.name} src={game.image}/>
+                        </Link>
                         <p><b>{game.name}</b></p>
                     </div>
                 
                 )
-            })}</div>
+            })}
         </div>
     )
 }
