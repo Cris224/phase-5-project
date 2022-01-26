@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_01_12_175940) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "games", force: :cascade do |t|
     t.string "name"
     t.string "release_date"
@@ -24,8 +27,8 @@ ActiveRecord::Schema.define(version: 2022_01_12_175940) do
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.string "comment"
-    t.integer "user_id"
-    t.integer "game_id"
+    t.bigint "user_id"
+    t.bigint "game_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_reviews_on_game_id"
