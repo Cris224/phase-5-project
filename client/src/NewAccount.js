@@ -12,7 +12,7 @@ function NewAccount(){
             // name: name,
             username: username,
         }
-        fetch('/users', {
+        fetch('/api/users', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userData)

@@ -8,7 +8,7 @@ function Main({fetchGame}){
     const [games, setGames] = useState([])
 
     useEffect(() => {
-        fetch('/games')
+        fetch('/api/games')
         .then(resp => resp.json())
         .then((data) => setGames(data))
     }, [])

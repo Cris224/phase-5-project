@@ -1,4 +1,4 @@
-class GamesController < ApplicationController
+class Api::GamesController < ApplicationController
 
     def index
         render json: Game.all, status: :ok

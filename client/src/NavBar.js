@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function NavBar({user, onLogout}){
 
     function handleLogout() {
-        fetch("/logout", {
+        fetch("/api/logout", {
           method: "DELETE",
         }).then(() => onLogout);
     }

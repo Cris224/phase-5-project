@@ -18,7 +18,7 @@ function App() {
   console.log(gameObj)
 
   useEffect(() => {
-    fetch("/me").then((response) => {
+    fetch("/api/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }
@@ -26,13 +26,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('/users')
+    fetch('/api/users')
     .then(resp => resp.json())
     .then((data) => setUsersArray(data))
   }, [])
 
   function fetchGame(name){
-    fetch(`/games/${name}`)
+    fetch(`/api/games/${name}`)
     .then(resp => resp.json())
     .then((data) => setGameObj(data))
   }

@@ -15,7 +15,7 @@ function NewReview({gameId, userId, setReviews, reviews}){
             comment: comment,
             rating: rating,
         }
-        fetch('/reviews', {
+        fetch('/api/reviews', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(formData)
