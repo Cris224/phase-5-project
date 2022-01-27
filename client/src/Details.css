@@ -51,7 +51,7 @@ span{
     font-size: larger;
 }
 
-.date, .platforms{
+.date{
     float: right;
     font-size: small;
 }

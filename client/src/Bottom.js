@@ -1,10 +1,13 @@
 import './Bottom.css'
+import {Link} from 'react-router-dom'
 
 function Bottom(){
     return(
         <>
             <footer id='btm'>
-                About
+                <Link to='/about'>
+                    About
+                </Link>
             </footer>
         </>
     )

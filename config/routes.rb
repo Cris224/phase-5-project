@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
 
 
-  resources :games, only: [:index]
+  resources :games
   get 'games/:name', to: 'games#show'
   
   
