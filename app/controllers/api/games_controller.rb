@@ -5,7 +5,7 @@ class Api::GamesController < ApplicationController
     end
 
     def show 
-        game = Game.find_by(name: params[:name])
+        game = Game.find_by(name: params[:id])
         render json:game, serializer: GameWithReviewSerializer, status: :ok
     end
 

@@ -25,8 +25,10 @@ function Details({gameObj, users, user}){
             <img className='image' src={gameObj.image}/>
             <h1 className='title'><span>Title:</span> {gameObj.name}</h1>
             <h2 className='release'><span>Release Date:</span> {gameObj.release_date}</h2>
+            <h2 className='platforms'><span>Platforms:</span> {gameObj.platforms}</h2>
             <h3 className='overview'><span>Overview:</span> {gameObj.description}</h3>
             <h3 className='score'><span>User Score:</span> {avg}%</h3>
+            <h3 className='score'><span>Critic Score:</span> {gameObj.critic_score}%</h3>
         </div>
         <div className='reviews-container'>
             <h1 className='head'>Reviews</h1>
