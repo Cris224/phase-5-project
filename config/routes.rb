@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :api do
+  post "/login", to: "sessions#create"
+  get "/me", to: "users#show"
+  delete "/logout", to: "sessions#destroy"
+
   resources :reviews, only: [:index, :create, :destroy, :update, :show]
   
 
@@ -9,10 +14,5 @@ Rails.application.routes.draw do
   
   resources :users, only: [:index, :destroy, :create, :show, :update]
   get "/me", to: 'users#show'
-
-
-  post "/login", to: "sessions#create"
-  get "/me", to: "users#show"
-  delete "/logout", to: "sessions#destroy"
-
+  end
 end

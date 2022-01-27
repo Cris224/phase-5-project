@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2022_01_12_175940) do
     t.string "release_date"
     t.string "description"
     t.string "image"
+    t.string "platforms"
+    t.integer "critic_score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
